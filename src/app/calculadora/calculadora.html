@@ -1,1 +1,39 @@
-<p>calculadora works!</p>
+<label for="num1">Número 1</label>
+<input
+  id="num1"
+  type="number"
+  [(ngModel)]="numero1">
+
+<br><br>
+
+<label for="num2">Número 2</label>
+<input
+  id="num2"
+  type="number"
+  [(ngModel)]="numero2">
+
+<br><br>
+
+<button (click)="somar()">
+  Somar
+</button>
+
+<button (click)="subtrair()">
+  Subtrair
+</button>
+
+<button (click)="multiplicar()">
+  Multiplicar
+</button>
+
+<button (click)="dividir()">
+  Dividir
+</button>
+
+<h2 *ngIf="!erro">
+  Resultado: {{resultado}}
+</h2>
+
+<h2 *ngIf="erro" style="color: red;">
+  {{erro}}
+</h2>
